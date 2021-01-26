@@ -1,4 +1,3 @@
-# Tree of Savior addon 
-## Bug fix & Request >> https://open.kakao.com/o/gAf9yiTc
+# Tree of Savior addon Beginner
 ## Please feel free to reach out.
 
