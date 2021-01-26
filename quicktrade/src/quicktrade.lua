@@ -43,7 +43,6 @@ function QUICKTRADE_PROCESS_COMMAND(command)
 	local IsFound = false;
 	local myHandle = session.GetMyHandle();
 	local foundList, foundCount = SelectObject(GetMyPCObject(), 10000, 'ALL')
-	local targethandle;
 	
 	for i = 1, foundCount do
 		local handle = GetHandle(foundList[i])
@@ -52,15 +51,14 @@ function QUICKTRADE_PROCESS_COMMAND(command)
 		if handle ~= myHandle and targetInfo.IsDummyPC ~= 1 then	
 			if tostring(familyName) == cmd then
 				IsFound = true;
-				targethandle = handle;		
+				exchange.RequestChange(handle);
+				break;
 			end		
 		end
 	end
   
 	if IsFound == false then 
-		ui.SysMsg(string.format("[QuickTrade][Alert] %s 팀을 찾을 수 없습니다.", cmd));
-	else
-		exchange.RequestChange(targethandle);
+		ui.SysMsg(string.format("[QuickTrade][Alert] %s 팀을 찾을 수 없습니다.", cmd));	
 	end
 end
 ----------------------------------------------------------------------------------------------------------------------
