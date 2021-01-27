@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uiframe name="gpbreaker" x="0" y="0" width="1" height="1">
+	<frame fasthide="true" layout_gravity="left top"/>
+	<option closebutton="false" hideable="false"/>
+	<input moveable="false" hittestframe="false"/>
+	<layer layerlevel="10"/>
+	<draw drawframe="false" drawtitlebarframe="false" drawtitlebar="false"/>
+	<controls/>
+</uiframe>
