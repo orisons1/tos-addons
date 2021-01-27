@@ -25,6 +25,16 @@ GPBreaker.msgtable = {
 	"NOTICE_START_FIELDBOSS_WORLD_EVENT",
 	"NOTICE_END_FIELDBOSS_WORLD_EVENT",
 }
+
+GPBreaker.msgstrtable = {
+
+	"여신의 가호를 받아",
+	"보스 협동전이 종료되었습니다.",
+	"여신의 가호 이벤트가 시작되었습니다!",
+	"여신의 가호 이벤트가 종료되었습니다!"
+	
+}
+
 ----------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
@@ -37,7 +47,8 @@ function GPBREAKER_ON_INIT(addon, frame)
 	
 	acutil.setupHook(GPBREAKER_HOOK_NOTICE_ON_MSG, 'NOTICE_ON_MSG')
 	acutil.setupHook(GPBREAKER_HOOK_MINIMIZED_GODPROTECTION_STARTT, 'MINIMIZED_GODPROTECTION_START')
-	
+	acutil.setupHook(GPBREAKER_HOOK_CHAT_SYSTEM, 'CHAT_SYSTEM')
+
 end
 ----------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
@@ -83,6 +94,25 @@ function GPBREAKER_HOOK_MINIMIZED_GODPROTECTION_STARTT(frame)
 
 	-- 남은 시간 설정
 	MINIMIZED_GODPROTECTION_REMAIN_TIME(frame);
+	
+end
+----------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+function GPBREAKER_HOOK_CHAT_SYSTEM(msg, color)
+
+	local IsFound = false;
+	
+	for index, value in ipairs(GPBreaker.msgstrtable) do
+		if string.find(msg,value) ~= nil then 
+				IsFound = true;
+				return;
+		end
+	end	
+		
+	if IsFound == false then
+		return CHAT_SYSTEM_OLD(msg, color);
+	end
 	
 end
 ----------------------------------------------------------------------------------------------------------------------
