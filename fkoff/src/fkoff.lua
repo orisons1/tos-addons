@@ -99,7 +99,7 @@ function FKOFF_PARTY_UPDATE()
 							local keywordTable = StringSplit(zoneKeyword, ';');
 							if session.world.IsIntegrateServer() == true or table.find(keywordTable, 'IsRaidField') > 0 or world.GetLayer() ~= 0 then
 								ui.SysMsg(string.format("[%s][%s] 등록된 팀이 파티에 가입하여 숙소로 이동합니다.",addonName, FkOff.settings.mode));
-								APPS_TRY_MOVE_BARRACK();
+								RUN_GAMEEXIT_TIMER('Barrack');
 							else
 								ui.Chat("/partyban PARTY_NORMAL "..value.."\n");
 								ui.SysMsg(string.format("[%s][%s] 등록된 팀을 강퇴시켰습니다.",addonName, FkOff.settings.mode));
@@ -110,7 +110,7 @@ function FKOFF_PARTY_UPDATE()
 							local keywordTable = StringSplit(zoneKeyword, ';');
 							if session.world.IsIntegrateServer() == true or table.find(keywordTable, 'IsRaidField') > 0 or world.GetLayer() ~= 0 then
 								ui.SysMsg(string.format("[%s][%s] 등록된 팀이 파티에 존재하여 숙소로 이동합니다.",addonName, FkOff.settings.mode));
-								APPS_TRY_MOVE_BARRACK();
+								RUN_GAMEEXIT_TIMER('Barrack');
 							else
 								ui.SysMsg(string.format("[%s][%s] 등록된 팀이 파티에 존재하여 파티를 탈퇴합니다.",addonName, FkOff.settings.mode));
 								OUT_PARTY();
