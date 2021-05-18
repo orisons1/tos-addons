@@ -22,4 +22,5 @@
 - addons 폴더 내 quickmatching 폴더 필요
 
 
+
 채팅 매크로 + hotkey 애드온이랑 같이 쓰면 편함
