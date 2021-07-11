@@ -1950,70 +1950,6 @@ local edges =
 			--[[이레디안의 피난처]]["d_irredians_113_1"] = 1,			
 			}, 
 
-----[[PVP 광산 무법지대]]["pvp_Mine"] = {}, 
-
-----[[베르니케의 파편 던전]]["d_solo_dungeon"] = {}, 
-
-----[[미쉐칸 숲]]["mission_whitetrees_56_1"] = {}, 
-
-----[[PVP 광산 무법지대]]["pvp_Mine_2"] = {}, 
-
-----[[어시스터 던전]]["d_solo_dungeon_2"] = {}, 
-
-----[[누오로딘 폭포]]["GuildColony_f_remains_37_1"] = {["id_catacomb_02"] = 1, ["f_remains_37"] = 1, ["f_remains_37_2"] = 1, }, 
-
-----[[스벤티마스 유형지]]["GuildColony_f_tableland_72"] = {["f_tableland_73"] = 1, ["Challenge_f_tableland_71"] = 1, ["d_underfortress_65"] = 1, }, 
-
-----[[살비야스 숲]]["GuildColony_f_pilgrimroad_41_2"] = {["f_pilgrimroad_41_1"] = 1, ["f_pilgrimroad_41_4"] = 1, ["f_pilgrimroad_41_3"] = 1, ["f_bracken_42_1"] = 1, }, 
-
-----[[게나르 평원]]["GuildColony_f_pilgrimroad_49"] = {["f_pilgrimroad_48"] = 1, ["f_pilgrimroad_47"] = 1, ["f_pilgrimroad_50"] = 1, }, 
-
-----[[아렐르노 남작령]]["GuildColony_f_siauliai_47_4"] = {["f_farm_47_3"] = 1, ["f_siauliai_50_1"] = 1, ["f_farm_47_1"] = 1, }, 
-
-----[[수로교 지역]]["GuildColony_f_farm_47_2"] = {["f_farm_47_3"] = 1, ["f_farm_47_1"] = 1, ["f_farm_49_1"] = 1, ["d_velniasprison_51_1"] = 1, }, 
-
-----[[아시오 메이지의 실험실]]["id_abbey_raid"] = {}, 
-
-----[[MissionInstance]]["mission_instance"] = {}, 
-
-----[[별의 탑 폐쇄 구역]]["uniq_startower_raid"] = {}, 
-
-----[[나비목 접선지]]["uniq_castle_raid"] = {}, 
-
-----[[하얀 마녀의 숲]]["snow_raid_glacier"] = {}, 
-
-----[[의문의 레어]]["d_limestonecave_70_1_STM_event"] = {}, 
-
-----[[왕릉 던전]]["id_zachariel_01"] = {}, 
-
-----[[수정광산 던전]]["id_cmine_01"] = {}, 
-
-----[[칠채곡 던전]]["id_huevillage_01"] = {}, 
-
-----[[카타콤 던전]]["id_catacomb_05"] = {}, 
-
-----[[협곡지대 던전]]["id_rokas_01"] = {}, 
-
-----[[살러스 수녀원 캐슬 던전]]["id_castle_67_2_nunnery"] = {}, 
-
-----[[샤울레이 던전]]["id_siauliai_01"] = {}, 
-
-----[[마르튀스 저장실]]["weekly_d_firetower_69_2"] = {}, 
-
-----[[마당 고원]]["weekly_f_tableland_71"] = {}, 
-
-----[[마족수감소 5구역]]["weekly_d_velniasprison_51_5"] = {}, 
-
-----[[글라데 언덕길]]["weekly_d_thorn_39_2"] = {}, 
-
-----[[시카리오스 1층]]["weekly_d_underfortress_68_1"] = {}, 
-
-----[[네이포트 성당 동관]]["weekly_d_cathedral_78_1"] = {}, 
-
-----[[흰 까마귀의 영면지]]["weekly_shadow_raid_main"] = {}, 
-
-----[[마신의 성소]]["raid_dcapital_108"] = {}, 
-
 --[[렘파라사 연못]]["ep13_f_siauliai_1"] = 
 			{
 			--[[오르샤]]["c_orsha"] = 1, 
@@ -2046,46 +1982,6 @@ local edges =
 			----[[X]]["델무어 소작촌"] = 1,]] 
 			}, 
 
-----[[테넷 화원]]["weekly_f_gele_57_4"] = {}, 
-
-----[[마르튀스 저장실]]["field_d_firetower_69_2"] = {}, 
-
-----[[마당 고원]]["field_f_tableland_71"] = {}, 
-
-----[[글라데 언덕길]]["field_d_thorn_39_2"] = {}, 
-
-----[[시카리오스 1층]]["field_d_underfortress_68_1"] = {}, 
-
-----[[네이포트 성당 동관]]["field_d_cathedral_78_1"] = {}, 
-
-----[[쇠락한 르귄가문의 던전]]["Mythic_startower"] = {}, 
-
-----[[가시숲 레이드]]["Mythic_thorn1"] = {}, 
-
-----[[대마법사의 타워]]["Mythic_firetower"] = {}, 
-
-----[[푸른 요새 던전]]["Mythic_castle"] = {}, 
-
-----[[마르튀스 저장실]]["Challenge_d_firetower_69_2"] = {}, 
-
-----[[마당 고원]]["Challenge_f_tableland_71"] = {}, 
-
-----[[글라데 언덕길]]["Challenge_d_thorn_39_2"] = {}, 
-
-----[[네이포트 성당 동관]]["Challenge_Division_d_cathedral_78_1"] = {}, 
-
-----[[흰 까마귀의 영면지]]["Challenge_shadow_raid_main"] = {}, 
-
-----[[테넷 화원]]["Challenge_f_gele_57_4"] = {}, 
-
-----[[마신의 성소]]["raid_giltine_AutoGuild"] = {}, 
-
-----[[방어선 돌파]]["TOSHero_Straight"] = {}, 
-
-----[[마력의 소용돌이]]["TOSHero_Wheel"] = {}, 
-
-----[[대성당 탈환]]["TOSHero_Grid"] = {}, 
-
 --[[아샤크 지하 감옥 1층]]["ep13_2_d_prison_1"] = 
 			{
 			--[[아샤크 지하 감옥 격리 구역]]["ep13_2_d_prison_3"] = 1, 
@@ -2097,24 +1993,10 @@ local edges =
 			--[[아샤크 지하 감옥 격리 구역]]["ep13_2_d_prison_3"] = 1, 
 			}, 
 
-----[[미지의 성역 1층]]["id_Unknownsanctuary_1"] = {}, 
-
-----[[TOS 봄 캠핑]]["Event_2105_JUMP"] = {}, 
-
 --[[아샤크 지하 감옥 격리 구역]]["ep13_2_d_prison_3"] = 
 			{
 			--[[아샤크 지하 감옥 2층]]["ep13_2_d_prison_2"] = 1, 
 			--[[아샤크 지하 감옥 1층]]["ep13_2_d_prison_1"] = 1, 
 			}, 
-
-----[[미지의 성역 2층]]["id_Unknownsanctuary_2"] = {}, 
-
-----[[성자의 기도소]]["raid_medusa"] = {}, 
-
-----[[미지의 성역 3층]]["id_Unknownsanctuary_3"] = {}, 
-
-----[[무한맵]]["infinite_map"] = {},
- 
-----[[팀 배틀 리그 토너먼트]]["pvp_tournament"] = {}, 
 	
 }
