@@ -1543,7 +1543,7 @@ local edges =
 --[[마족수감소 2구역]]["d_velniasprison_51_2"] = 
 			{
 			--[[마족수감소 1구역]]["d_velniasprison_51_1"] = 1, 
-			--[[마족수감소 3구역]]["d_velniasprison_51_4"] = 1, 
+			--[[마족수감소 3구역]]["d_velniasprison_51_3"] = 1, 
 			}, 
 
 --[[마족수감소 3구역]]["d_velniasprison_51_3"] = 
