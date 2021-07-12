@@ -3279,61 +3279,70 @@ function QUICKPATH_ON_INIT(addon, frame)
 
 	QuickPath.addon = addon;
 	QuickPath.frame = frame;
+	
+	QuickPath.isRunning = false;
 
 	QuickPath.frame:SetAlpha(0);
 	QuickPath.frame:Resize(700,200);
-
+	
 	QuickPath.charbaseframe = ui.GetFrame('charbaseinfo1_my');
 	QuickPath.frame:SetPos(QuickPath.charbaseframe:GetOffsetX(), QuickPath.charbaseframe:GetOffsetY());
 	
-	
-	local centerIcon = QuickPath.frame:CreateOrGetControl('picture', "centerIcon", 220, 115, 30, 30);
-	tolua.cast(centerIcon, "ui::CPicture");
-	centerIcon:EnableHitTest(0);
-	centerIcon:SetImage("minimap_1_REPEAT");
-	centerIcon:SetEnableStretch(1);
-	centerIcon:SetVisible(0);	
+	QuickPath.icon = QuickPath.frame:CreateOrGetControl('picture', "QuickPath.icon", 220, 115, 30, 30);
+	tolua.cast(QuickPath.icon, "ui::CPicture");
+	QuickPath.icon:EnableHitTest(0);
+	QuickPath.icon:SetImage("minimap_1_REPEAT");
+	QuickPath.icon:SetEnableStretch(1);
+	QuickPath.icon:SetVisible(1);	
 																					  
-	local hintArrow = QuickPath.frame:CreateOrGetControl('picture', "hintArrow", 235-37.5, 130-37.5, 75, 75);
-	tolua.cast(hintArrow, "ui::CPicture");
-	hintArrow:EnableHitTest(0);
-	hintArrow:SetImage("npc_guide_arrow_x2");
-	hintArrow:SetEnableStretch(1);
-	hintArrow:SetVisible(0);	
+	QuickPath.arrow = QuickPath.frame:CreateOrGetControl('picture', "QuickPath.arrow", 235-37.5, 130-37.5, 75, 75);
+	tolua.cast(QuickPath.arrow, "ui::CPicture");
+	QuickPath.arrow:EnableHitTest(0);
+	QuickPath.arrow:SetImage("npc_guide_arrow_x2");
+	QuickPath.arrow:SetEnableStretch(1);
+	QuickPath.arrow:SetVisible(1);	
 		
-	local infotxt = QuickPath.frame:CreateOrGetControl("richtext", "commatext", 280, 120, 25, 25);
-	tolua.cast(infotxt, "ui::CRichText");
-	infotxt:SetVisible(0);
-	--infotxt:SetText('{#FFFFFF}{s18}{@st41}{/}{/}');
+	QuickPath.txt = QuickPath.frame:CreateOrGetControl("richtext", "QuickPath.txt", 280, 118, 25, 25);
+	tolua.cast(QuickPath.txt, "ui::CRichText");
+	QuickPath.txt:SetVisible(1);
 
-	local infotxt = QuickPath.frame:CreateOrGetControl("richtext", "commatext", 280, 120, 25, 25);
-	tolua.cast(infotxt, "ui::CRichText");
-	infotxt:SetVisible(0);
-	--infotxt:SetText('{#FFFFFF}{s18}{@st41}{/}{/}');
 
-	
 	QuickPath.bountyhuntframe = ui.GetFrame('bountyhunt_milestone');
 	QuickPath.bountyhuntframe:Resize(360, 615);
-	local minimap2 = QuickPath.bountyhuntframe:CreateOrGetControl('picture', "minimap2", 5, 265, 345, 345); 
-	tolua.cast(minimap2, "ui::CPicture");
-	minimap2:EnableHitTest(0);
-	minimap2:SetImage("fullred");
-	minimap2:SetEnableStretch(1);
-	minimap2:SetVisible(1);	
-	minimap2:ShowWindow(1);		
+	QuickPath.bountyhuntframe:SetOffset(1560, 335);
+
+	QuickPath.map = QuickPath.bountyhuntframe:CreateOrGetControl("picture", "QuickPath.map", 5, 265, 345, 345);
+	QuickPath.mapld = QuickPath.bountyhuntframe:CreateOrGetControl("picture", "QuickPath.mapld", 5, 265, 40, 40);
+	QuickPath.warpportalnext = QuickPath.bountyhuntframe:CreateOrGetControl("picture", "QuickPath.warpportalnext", 5, 265, 20, 20);
 	
+	AUTO_CAST(QuickPath.map);
+	AUTO_CAST(QuickPath.mapld);
+	AUTO_CAST(QuickPath.warpportalnext);
 	
-	QuickPath.icon = centerIcon;
-	QuickPath.arrow = hintArrow;
-	QuickPath.txt = infotxt;
+	QuickPath.map:EnableHitTest(1);
+	QuickPath.mapld:EnableHitTest(1);
+	QuickPath.warpportalnext:EnableHitTest(1);
+
+	QuickPath.map:SetEnableStretch(1);
+	QuickPath.mapld:SetEnableStretch(1);
+	QuickPath.warpportalnext:SetEnableStretch(1);
 	
-	QuickPath.isRunning = false;
+	QuickPath.map:SetVisible(1);
+	QuickPath.mapld:SetVisible(1);
+	QuickPath.warpportalnext:SetVisible(1);
+	
+	QuickPath.map:ShowWindow(1);		
+	QuickPath.mapld:ShowWindow(1);
+	QuickPath.warpportalnext:ShowWindow(1);
+	
+	QuickPath.mapld:SetImage("minimap_leader");
+	QuickPath.warpportalnext:SetImage("minimap_1_REPEAT");	
 		
 	
 	addon:RegisterMsg('BOUNTYHUNT_MILESTONE_OPEN', 'QUICKPATH_START_BOUNTYHUNT');
 	addon:RegisterMsg('BOUNTYHUNT_MILESTONE_CLOSE', 'QUICKPATH_STOP_BOUNTYHUNT');
 	
-	QuickPath.frame:ShowWindow(1);
+	
 
 
 	acutil.slashCommand("/qp",QUICKPATH_PROCESS_COMMAND);
@@ -3347,36 +3356,75 @@ function QUICKPATH_START_BOUNTYHUNT(frame, msg, strarg, numarg)
 	if QuickPath.isRunning ~= true and numarg ~= 0 then
 		QuickPath.isRunning = true;
 
-		ui.GetFrame('bountyhunt_milestone'):SetPos(1559,350)
 		QuickPath.destMapClassID = tonumber(numarg);
 		QuickPath.destMapClassName = GetClassString('Map', QuickPath.destMapClassID, 'ClassName');
 		QuickPath.destMapName = GET_MAP_NAME(QuickPath.destMapClassID);		
 		
-		local path = DIJKSTRA(edges, session.GetMapName(), QuickPath.destMapClassName);
+		local mapClassName = session.GetMapName();
 		
+
 		QuickPath.path = {};
-		QuickPath.path_Kor = {};
 		QuickPath.nodeCount = 0;
 		
-		if session.GetMapName() ~= QuickPath.destMapClassName then
-			if path == nil then
-				CHAT_SYSTEM("경로를 찾을 수 없습니다.")
+		if mapClassName ~= QuickPath.destMapClassName then
+
+			QuickPath.map:SetImage(mapClassName);
+		
+			for k,v in pairs(mapData) do
+				if mapClassName == k then
+					for i, j in pairs (edges) do
+						if mapClassName == i then
+							isExistMapData = true;
+						end
+					end
+				end
+			end
+
+			for k,v in pairs(mapData) do
+				if QuickPath.destMapClassName == k then
+					for i, j in pairs (edges) do
+						if QuickPath.destMapClassName == i then
+							isExistEdge = true;
+						end
+					end
+				end
+			end
+
+			if isExistMapData ~= true or isExistEdge ~= true then
+				ui.SysMsg("[qp] 존재하지 않거나 적용되지 않은 맵입니다.");
+				QuickPath.bountyhuntframe:ReSize(360, 260);
+				QuickPath.frame:ShowWindow(0);
+				return
+			end
+	
+			local path = DIJKSTRA(edges, session.GetMapName(), QuickPath.destMapClassName);
+		
+			local nodeCount = 0;
+			for k,v in pairs(path) do
+				nodeCount = 1 + nodeCount;
+			end
+			
+			if nodeCount == 0 then 
+				ui.SysMsg("[qp] 경로를 찾을 수 없습니다.");
+				QuickPath.bountyhuntframe:ReSize(360, 260);	
+				QuickPath.frame:ShowWindow(0);				
 			else	
 				for k,v in pairs(path) do
 					table.insert(QuickPath.path,1, v);
-					table.insert(QuickPath.path_Kor,1, GetClass("Map", v).Name);
 					QuickPath.nodeCount = 1 + QuickPath.nodeCount;
 				end
 				
-				QuickPath.mapClassName = "";
-				QuickPath.stepCount = 1;
+				QUICKPATH_EXCEPTION(QuickPath.path);
+							
 				QuickPath.frame:RunUpdateScript("QUICKPATH_INFO_UPDATE", 0.001);
-				QuickPath.icon:SetVisible(1);
-				QuickPath.arrow:SetVisible(1);
-				QuickPath.txt:SetVisible(1);
 				QuickPath.frame:ShowWindow(1);
 			end
+		
+		else
+			QuickPath.bountyhuntframe:ReSize(360, 260);
+			QuickPath.frame:ShowWindow(0);
 		end
+		
 		
 	end
 end
@@ -3385,12 +3433,8 @@ function QUICKPATH_STOP_BOUNTYHUNT()
 	
 	QuickPath.frame:StopUpdateScript("QUICKPATH_INFO_UPDATE")
 	QuickPath.path = {};
-	QuickPath.path_Kor = {};
 	QuickPath.isRunning = false;
 	QuickPath.destMapClassID = nil;
-	QuickPath.icon:SetVisible(0);
-	QuickPath.arrow:SetVisible(0);
-	QuickPath.txt:SetVisible(0);
 	QuickPath.frame:ShowWindow(0);
 	
 end
@@ -3406,7 +3450,6 @@ function QUICKPATH_INFO_UPDATE()
 	local mapClassName = session.GetMapName();
 	local mapprop = geMapTable.GetMapProp(mapClassName);
 
-
 	if mapClassName ~= QuickPath.destMapClassName then
 		for k, v in pairs(QuickPath.path) do
 			if v == mapClassName then
@@ -3421,15 +3464,21 @@ function QUICKPATH_INFO_UPDATE()
 			end
 		end
 		
+		local myPos = info.GetPositionInMap(myHandle, 345, 345);
+		QuickPath.mapld:SetOffset(math.floor(myPos.x) + 5 - 20, math.floor(myPos.y) + 265 - 20)
+		local myAng = info.GetAngle(myHandle) - mapprop.RotateAngle;
+		QuickPath.mapld:SetAngle(myAng);
+
+		local warpportalPos = info.GetPositionInMap(QuickPath.destX, QuickPath.destY, QuickPath.destZ, 345, 345);
+		--CHAT_SYSTEM(warpportalPos.x..":"..warpportalPos.y)
+		QuickPath.warpportalnext:SetOffset(math.floor(warpportalPos.x) + 5 - 10 , math.floor(warpportalPos.y) + 265 - 10);
+	
 	end
 
 	if mapClassName ~= QuickPath.destMapClassName then
-		QuickPath.txt:SetText('{#FFFFFF}{s18}{@st41}{ol}'..QuickPath.path_Kor[2].."    "..tostring(QuickPath.nodeCount-1)..'{/}{/}{/}');
+		QuickPath.txt:SetText('{#FFFFFF}{s18}{@st41}{ol}'..GetClass("Map", QuickPath.path[2]).Name.."    "..tostring(QuickPath.nodeCount-1)..'{/}{/}{/}');
 		angle = info.GetDestPosAngle(QuickPath.destX, QuickPath.destY, QuickPath.destZ, myHandle) - mapprop.RotateAngle;
 		QuickPath.arrow:SetAngle(angle);
-	else
-		QuickPath.txt:SetText('{#FFFFFF}{s18}{@st41}'..QuickPath.destMapName.."    ".."도착"..'{/}{/}{/}');
-		QuickPath.arrow:SetVisible(0);
 	end
 	
 	return 1;
@@ -3445,17 +3494,68 @@ function QUICKPATH_PROCESS_COMMAND(command)
 		cmd = table.remove(command, 1);	
 	end
 
-	if cmd == "on" then
-	
-	elseif cmd == "off" then
-	
-	elseif cmd == "test" then
-		local path=DIJKSTRA(edges,"c_Klaipe","c_orsha")
-		for k,v in pairs(path) do
-			CHAT_SYSTEM(v);
+	if cmd == "info" then
+		local myHandle = session.GetMyHandle();
+		local myActor = GetMyActor();
+		local mapClassName = session.GetMapName();
+		local mapName = GetClass("Map", mapClassName).Name
+		CHAT_SYSTEM(string.format("[%s][%s] x=%03d, y=%03d", mapName, mapClassName, math.floor(myActor:GetPos().x), math.floor(myActor:GetPos().y)));	
+		
+	elseif cmd == "debug" then
+		if #command == 2 then
+			local src = table.remove(command, 1);
+			local dst = table.remove(command, 1);
+			
+			if src == dst then 
+				ui.SysMsg("[qp][debug] 동일한 맵입니다.");
+				return
+			end
+			
+			local isExistMapData = false;
+			local isExistEdge = false;
+			
+			for k,v in pairs(mapData) do
+				if src == k then
+					for i, j in pairs (edges) do
+						if src == i then
+							isExistMapData = true;
+						end
+					end
+				end
+			end
+
+			for k,v in pairs(mapData) do
+				if dst == k then
+					for i, j in pairs (edges) do
+						if dst == i then
+							isExistEdge = true;
+						end
+					end
+				end
+			end
+
+			if isExistMapData ~= true or isExistEdge ~= true then
+				ui.SysMsg("[qp][debug] 존재하지 않거나 적용되지 않은 맵입니다.");
+				return
+			end
+
+			local path = DIJKSTRA(edges, src, dst);		
+			
+			QUICKPATH_EXCEPTION(path)
+
+			local nodeCount = 0;
+			
+			for k,v in pairs(path) do
+				CHAT_SYSTEM("[qp][debug] "..v.." "..GetClass("Map", v).Name);
+				nodeCount = 1 + nodeCount;
+			end
+			
+			if nodeCount == 0 then 
+				ui.SysMsg("[qp][debug] 경로를 찾을 수 없습니다.");	
+			end		
+		else
+			ui.SysMsg("[qp][debug] Invalid Parameter.");
 		end
-	elseif cmd == "maintenance" then
-		QUICKPATH_MAINTANENCE();
 	else
 		ui.SysMsg("[qp] Invalid Command.");		
 	end
@@ -3582,88 +3682,29 @@ end
 ----------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
-function QUICKPATH_MAINTANENCE()
-
-	file = io.open("maintenance.lua", "w+");
-		
-	local t = {};
-
-	for k = 0, 30000 do -- refer map.ies 
-		local MapClassName = GetClassString('Map', k, 'ClassName');		 
-		if MapClassName ~= "None" then 
-			local MapName = GetClassString('Map', k, 'Name');				
-			t[MapName] = MapClassName;
-		end
-		
+function QUICKPATH_EXCEPTION(path)
+	
+	local nodeCount = 0;
+	
+	for k, v in pairs (path) do
+		nodeCount = 1 + nodeCount;
 	end
-
-	for i = 0, 30000 do 
-		local MapClassID = GetClassString('Map', i, 'ClassID');
-		local MapClassName = GetClassString('Map', i, 'ClassName');
-		local MapName = GetClassString('Map', i, 'Name');
-		if MapClassName ~= "None" then 
-			local mapprop = geMapTable.GetMapProp(MapClassName);
-			local mongens = mapprop.mongens;
-			if mongens ~= nil then
-				local cnt = mongens:Count();
-				file:write("--[["..MapName.."]][\""..MapClassName.."\"] = \n			{\n"); 
-				for i = 0 , cnt - 1 do
-					local MonProp = mongens:Element(i);            
-					if --[[MonProp:GetClassName() == 'Warp_arrow']] 1 then
-						if MonProp.Minimap >= 1 then
-							local GenList = MonProp.GenList;
-							local GenCnt = GenList:Count();
-							for j = 0 , GenCnt - 1 do
-								local WorldPos = GenList:Element(j);
-								local ctrlname = MonProp:GetName();
-								--local GenType = MonProp.GenType;
-								
-								local korName = ctrlname;
-								local EngName = "  ";
-								
-								for k,v in pairs(t) do
-									if k == ctrlname then		
-										EngName = v;
-									end
-								end
-								file:write("			--[["..korName.."]][\""..EngName.."\"] = {"..string.format("x=%d,y=%d,z=%d}, \n", WorldPos.x, WorldPos.y, WorldPos.z));
-									
-							end								
-						end								
-					end
+	
+	
+	for k, v in pairs(path) do
+		if v == "f_huevillage_58_4" then
+			for i=k+1, nodeCount do
+				if path[i] == "d_thorn_23" then
+					path[k+1] = "f_katyn_13";
+					path[k+2] = "f_katyn_14";
+					path[k+3] = "d_thorn_22";										
 				end
-				file:write("			}, \n\n");
-			end	
-		end 
-	end 
-	file:close();
-	
-	
-	local mapclassname_kor = {}
-	
-	file2 = io.open("mapclassname_kor.lua", "w+");
-	
-	
-	for k = 0, 30000 do -- refer map.ies 
-		local MapClassName = GetClassString('Map', k, 'ClassName');		 
-		if MapClassName ~= "None" then 
-			local MapName = GetClass("Map", MapClassName).Name;				
-			mapclassname_kor[MapClassName] = MapName;
+			end
 		end
+	
+	
+	
 		
+	
 	end
-	
-	file2:write("local mapClassName_Kor = \n	{");
-	
-	for k,v in pairs(mapclassname_kor) do
-		file2:write("[\""..k.."\"] = \""..v.."\", \n");
-	end
-
-	file2:write("}");
-	
-	file2:close();
-
 end
-----------------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------------
