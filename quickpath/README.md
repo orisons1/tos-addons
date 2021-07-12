@@ -19,6 +19,6 @@
 - debug code, 예외 처리 추가
  
 
-[!](https://user-images.githubusercontent.com/77488646/125259519-59da0200-e33a-11eb-9204-489f85caced5.png)
+[!긴자 외관](https://user-images.githubusercontent.com/77488646/125259519-59da0200-e33a-11eb-9204-489f85caced5.png)
 
 -2021-07-12
