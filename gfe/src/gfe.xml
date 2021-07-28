@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uiframe name="gfe" x="0" y="0" width="10" height="10">
+	<frame layout_gravity="light top" margin="0 0 0 0"/>
+	<option closebutton="true" hideable="false"/>
+	<input moveable="false" hittestframe="false"/>
+	<layer layerlevel="99"/>
+	<draw drawnotitlebar="false" drawtitlebar="false" drawframe="true"/>
+	<controls>
+	</controls>
+</uiframe>
