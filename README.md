@@ -55,7 +55,7 @@ Modification : mod-v1.0.0
 <br/>
 
 ## 4. Contributions
-If you would like to contribute to the development of addons ( Pre-Test ), Please fill out and submit it as a free file format the form below.
+If you would like to contribute to the development of addons ( Pre-Test ), Please fill out and submit it the form below as a free file format .
 - E-Mail : ```tester58126@gmail.com```
 ```
 1. Server / Level
