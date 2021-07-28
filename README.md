@@ -37,10 +37,9 @@ Version management of addons deployed by this repository.
 Development : v1.0.0
 Modification : mod-v1.0.0
 ```
-`Modification Mark`-`jor Version`.`Minor Version`.`Maintenance Version`
+`Modification Mark`-`Major Version`.`Minor Version`.`Maintenance Version`
 - Modification Mark : Indicates modified version of addon developed by others.
-- Major Version : Increase the number when there is a significant change in behavior and system.
-- Minor Version : Increase the number when there is a change, such as adding features that never existed or modifying existing features.
+- Major Version : Increase the number when a major change in behavior or system occurs.
+- Minor Version : Increase the number when a change occurs, such as the addition of a function that has not been present or modification of an existing function.
 - Maintenance Version :  Increase the number when minor bug fixes occur.
-
 *****
