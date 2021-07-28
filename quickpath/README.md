@@ -20,7 +20,10 @@ It works as long as you install it.
 <br/>
 <br/>
 
-
+## Update Scheduled Content
+- Will be added ``Clover Finder`` addon like features.
+- Will be modified to save frame position.
+- Will be modified to resize frame size to original frame size in destination map.
 
  
 
