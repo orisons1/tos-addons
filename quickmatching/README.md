@@ -23,7 +23,7 @@ It works when you enter the command after installation.
 <br/>
 
 ## Tip
-Comes better with chat macros (F8) and ``hotkey`` addon.
+It is more convenient to use with in-game chat macros (F8) and ``hotkey`` addon that can be installed in AddonManager.
 <br/>
 <br/>
 
