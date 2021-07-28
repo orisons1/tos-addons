@@ -1,2 +1,2 @@
-# Tree of Savior addon Beginner
+# Korea Tree of Savior Addon Laboratory
 ##
