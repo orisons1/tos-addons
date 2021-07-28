@@ -22,9 +22,10 @@ Copy the form, fill it out, and submit it as a free file format.
 ```
 <br/>
 
-### 2.2.1. Development Request
+### 2.2. Development
+#### 2.2.1. Development Request
 Request for development of addons that has never been before.
-### 2.2.2. Development Request Form
+#### 2.2.2. Development Request Form
 Copy the form, fill it out, and submit it as a free file format.
 ```
 1. Function ( in detail )
@@ -33,6 +34,9 @@ Copy the form, fill it out, and submit it as a free file format.
 ```
 <br/>
 
+### 2.3. Request Form Submission
+E-Mail : ```tester58126@gmail.com```
+KaKaoTalk : ```tester58126```
 
 <br/>
 <br/>
