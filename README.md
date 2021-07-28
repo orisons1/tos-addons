@@ -23,8 +23,11 @@ Copy the form, fill it out, and submit it as a free file format.
 <br/>
 
 ### 2.2. Development
+<br/>
 #### 2.2.1. Development Request
+<br/>
 Request for development of addons that has never been before.
+<br/>
 #### 2.2.2. Development Request Form
 Copy the form, fill it out, and submit it as a free file format.
 ```
@@ -32,7 +35,6 @@ Copy the form, fill it out, and submit it as a free file format.
 2. Possibility of breach of contract terms
 3. Reasons and Validity for Need
 ```
-<br/>
 
 ### 2.3. Request Form Submission
 - E-Mail : ```tester58126@gmail.com```
