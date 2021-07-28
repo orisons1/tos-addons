@@ -7,9 +7,8 @@ When you succeed in fishing for an event, If the fishing box is filled with more
 
 ## Command
 ``/gfe``  ``parameter 1``
-
+|:---:|:---:|:---|
 | parameter 1 | description   | Example  |
-|:---:|:---|:---|
 | on  | Enable addon (default)| /gfe on  |
 | off | Disable addon         | /gfe off |
 <br/>
