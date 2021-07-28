@@ -7,7 +7,6 @@
 - Displays the character's position and should move portal's position in the frame offered a bounty hunt frame. 
 <br/>
 
-
 ## Manual
 It works as long as you install it.
 <br/>
