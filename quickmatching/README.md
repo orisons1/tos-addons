@@ -30,6 +30,8 @@ It is more convenient to use with in-game chat macros (F8) and ``hotkey`` addon 
 ## Release Note
 * *v1.5.1 Release / 2021-07-08*
     - Delete Automatic Buff Selection.
+<br/>
+<br/>
 
 ## Update Scheduled Content
 - Will be modified Command parameters.
