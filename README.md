@@ -51,6 +51,6 @@ Version management of addons deployed by this repository.
 Development : v1.0.0
 Modification : mod-v1.0.0
 ```
-`Modification Mark`-`Major Version`.`Minor Version`.`Maintenance Version`
+`Modification Mark`-v`Major Version`.`Minor Version`.`Maintenance Version`
 <br/>
 <br/>
