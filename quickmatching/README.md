@@ -24,7 +24,7 @@ It works when you enter the command after installation.
 
 ## Release Note
 - *v1.5.1 Release / 2021-07-08*
-    +ㅁㄴㅇㄻㄴㅇㄹ
+    test
 <br/>
 <br/>
 
