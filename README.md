@@ -59,7 +59,7 @@ Modification : mod-v1.0.0
 If you would like to contribute to the development of addons ( Pre-Test ), Please fill out and submit it as a free file format the form below.
 - E-Mail : ```tester58126@gmail.com```
 ```
-1. Server / Charactor Name / Team Name / Level
+1. Server / Level
 2. Game content that cannot be played due to character performance issues ( Raid )
 3. Game access time zone 
 4. E-Mail Address or KakoaTalk ID or Means of contact
