@@ -8,7 +8,7 @@ If the fishing box is filled with more than 5 spaces, the fishing box will be au
 - ``/gfe``  ``parameter 1``
 
 | parameter 1 | description   | Example  |
-|:---|:---:|---:|
+|:---:|:---|:---|
 | on  | Enable addon (default)| /gfe on  |
 | off | Disable addon         | /gfe off |
 <br/>
