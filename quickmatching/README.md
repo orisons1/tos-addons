@@ -22,11 +22,14 @@ It works when you enter the command after installation.
 <br/>
 <br/>
 
-## Release Note
-* *v1.5.1 Release / 2021-07-08*
-    - test
+## Tip
+Comes better with chat macros (F8) and ``hotkey`` addon.
 <br/>
 <br/>
 
-## Tip
-Comes better with chat macros (F8) and ``hotkey`` addon.
+## Release Note
+* *v1.5.1 Release / 2021-07-08*
+    - Delete Auto Buff Selection.
+
+
+
