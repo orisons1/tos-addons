@@ -34,10 +34,13 @@ Copy the form, fill it out, and submit it as a free file format.
 Version management of addons deployed by this repository.
 *****
 ```
-Development : ''v1.0.0'' : ''Major Version''.''Minor Version''.''Maintenance Version''
-Modification : ''-mod-v1.0.0'' : -''Modification Mark''-''Major Version.Minor Version''.''Maintenance Version''
+Development : v1.0.0
+Modification : -mod-v1.0.0
 ```
-*Major Version : Increase the number when there is a significant change in behavior and system.
-*Minor Version : Increase the number when there is a change, such as adding features that never existed or modifying existing features.
-*Maintenance Version :  Increase the number when minor bug fixes occur.
+-``-Modification Mark-````Major Version``.``Minor Version``.``Maintenance Version``
+-*Modification Mark : Indicates modified version of addon developed by others.
+-*Major Version : Increase the number when there is a significant change in behavior and system.
+-*Minor Version : Increase the number when there is a change, such as adding features that never existed or modifying existing features.
+-*Maintenance Version :  Increase the number when minor bug fixes occur.
+
 *****
