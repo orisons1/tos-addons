@@ -1,4 +1,4 @@
-# [kr memberinfo]
+# kr memberinfo
 
 ## Function
 Enable comparison via Korean chat commands.
