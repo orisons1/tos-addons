@@ -31,17 +31,15 @@ Copy the form, fill it out, and submit it as a free file format.
 
 
 #### 3. Version Management
-Version management of addons deployed by this repository.
+- Version management of addons deployed by this repository.
+##### Modification Mark : Indicates modified version of addon developed by others.
+##### Major Version : Increase the number when a major change in behavior or system occurs.
+##### Minor Version : Increase the number when adding features that never existed or modifying existing features.
+##### Maintenance Version :  Increase the number when minor bug fixes occurs.
 *****
 ```
 Development : v1.0.0
 Modification : mod-v1.0.0
-
 ```
 `Modification Mark`-`Major Version`.`Minor Version`.`Maintenance Version`
-* * *
-Modification Mark : Indicates modified version of addon developed by others.
-Major Version : Increase the number when a major change in behavior or system occurs.
-Minor Version : Increase the number when adding features that never existed or modifying existing features.
-Maintenance Version :  Increase the number when minor bug fixes occurs.
 *****
