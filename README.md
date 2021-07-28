@@ -12,16 +12,16 @@ See the README.md file for each addon folder.
 ## 2. Request
 ### 2.1.1. Modify Request
 Modifications to addons that are currently inoperative or discontinued development.
-#### 2.1.2. Request Form
+### 2.1.2. Request Form
 Copy the form, fill it out, and submit it as a free file format.
 ```
 1. 
 2. 
 3. 
 ```
-#### 2.1.2 Develop Request
+### 2.2.1 Develop Request
 Request for development of addons that has never been before.
-##### 2.2.2 Request Form
+### 2.2.2 Request Form
 Copy the form, fill it out, and submit it as a free file format.
 ```
 1. 
