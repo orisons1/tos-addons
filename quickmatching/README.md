@@ -1,7 +1,7 @@
 # [Quick Matching]
 
 ## Function
-Automate challenge mode entry and matching with chat commands
+Automate challenge mode entry and matching with chat commands.
 <br/>
 <br/>
 
@@ -23,16 +23,10 @@ It works when you enter the command after installation.
 <br/>
 
 ## Release Note
--* v1.5.1 Release / 2021-07-08*
-    ㅁㄴㅇㄻㄴㅇㄹ
+- *v1.5.1 Release / 2021-07-08*
+    +ㅁㄴㅇㄻㄴㅇㄹ
 <br/>
 <br/>
 
 ## Tip
-Comes better with chat macros (F8) and ``hotkey`` addon
-
-
-
-
-
--2021-07-08
+Comes better with chat macros (F8) and ``hotkey`` addon.
