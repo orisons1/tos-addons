@@ -9,7 +9,7 @@ Automate challenge mode entry and matching with chat commands
 ``/qm`` ``parameter`` of ``/챌`` ``parameter``
 
 | parameter | description | example |
-|:---|:---:|:--:|
+|:---:|:---:|:--:|
 |1|Lv440 챌린지 모드 (1인 입장)|``/qm 1`` or ``/챌 1``|
 |2|Lv400 챌린지 모드 : 자동매칭 |``/qm 2`` or ``/챌 2``|
 |3|Lv440 챌린지 모드 : 자동매칭|``/qm 3`` or ``/챌 3``|
