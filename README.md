@@ -2,11 +2,8 @@
 The purpose of this repository is to develop and distribute addon to MMORPG Tree of Savior's Korean server.
 <br/>
 <br/>
-<br/>
-<br/>
 ## 1. Description
 See the README.md file for each addon folder.
-<br/>
 <br/>
 <br/>
 ## 2. Request
@@ -30,7 +27,6 @@ Copy the form, fill it out, and submit it as a free file format.
 ```
 <br/>
 <br/>
-<br/>
 ## 3. Version Management
 Version management of addons deployed by this repository.
 - Modification Mark : Indicates modified version of addon developed by others.
@@ -42,6 +38,5 @@ Development : v1.0.0
 Modification : mod-v1.0.0
 ```
 `Modification Mark`-`Major Version`.`Minor Version`.`Maintenance Version`
-<br/>
 <br/>
 <br/>
