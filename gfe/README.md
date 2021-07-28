@@ -22,3 +22,7 @@ It works as long as you install it.
 
 ## Availability Period
 2021-07-29 after ktos maintenance ~ 2021-08-12 before ktos maintenance 
+
+
+## Release Note
+### v1.0.1 Release / 2021-07-28
