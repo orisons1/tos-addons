@@ -1,5 +1,5 @@
 # Korea Tree of Savior Addon Laboratory
-The purpose of this repository is to develop and distribute addon to MMORPG Tree of Savior's Korean server.
+The purpose of this repository is to develop and distribute addons to MMORPG Tree of Savior's Korean server.
 <br/>
 <br/>
 
