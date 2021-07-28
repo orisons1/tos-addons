@@ -23,8 +23,8 @@ It works when you enter the command after installation.
 <br/>
 
 ## Release Note
-- *v1.5.1 Release / 2021-07-08*
-    test
+* *v1.5.1 Release / 2021-07-08*
+    - test
 <br/>
 <br/>
 
