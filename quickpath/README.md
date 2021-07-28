@@ -1,4 +1,4 @@
-# [Quick Path Finder]
+# Quick Path Finder
 
 ## Function
 
