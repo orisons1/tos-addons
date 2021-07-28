@@ -16,7 +16,7 @@ Modifications to addons that are currently inoperative or discontinued developme
 Copy the form, fill it out, and submit it as a free file format.
 ```
 1. Addon Name 
-2. Addon .ipf file or Source (*.lua , *.xml, *.tga, *.*) or File URL
+2. Addon .ipf file or Source (*.lua , *.xml, *.*) or File URL
 3. Function ( in detail )
 4. Features to modify ( in detail )
 ```
