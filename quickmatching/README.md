@@ -1,7 +1,7 @@
 # Quick Matching
 
 ## Function
-Automate challenge mode entry and matching with chat commands.
+Automate challenge mode Admission and matching with chat commands.
 <br/>
 <br/>
 
@@ -29,7 +29,8 @@ It is more convenient to use with in-game chat macros (F8) and ``hotkey`` addon 
 
 ## Release Note
 * *v1.5.1 Release / 2021-07-08*
-    - Delete Auto Buff Selection.
+    - Delete Automatic Buff Selection.
 
-
-
+## Update Scheduled Content
+- Will be modified Command parameters.
+- Will be added Automatic matching for raid.
