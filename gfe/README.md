@@ -5,7 +5,7 @@ When you succeed in fishing for an event, If the fishing box is filled with more
 <br/>
 
 ## Command
-- ``/gfe``  ``parameter 1``
+``/gfe``  ``parameter 1``
 
 | parameter 1 | description   | Example  |
 |:---:|:---|:---|
@@ -15,3 +15,7 @@ When you succeed in fishing for an event, If the fishing box is filled with more
 
 ## Manual
 It works as long as you install it.
+<br/>
+
+## Availability Period
+2021-07-29 after ktos maintenance ~ 2021-08-12 before ktos maintenance 
