@@ -20,13 +20,10 @@ Copy the form, fill it out, and submit it as a free file format.
 3. Function ( in detail )
 4. Features to modify ( in detail )
 ```
-<br/>
 
 ### 2.2. Development
 #### 2.2.1. Development Request
-<br/>
 Request for development of addons that has never been before.
-<br/>
 #### 2.2.2. Development Request Form
 Copy the form, fill it out, and submit it as a free file format.
 ```
