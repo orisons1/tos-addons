@@ -25,4 +25,4 @@ It works as long as you install it.
 
 
 ## Release Note
--* v1.0.1 Release / 2021-07-28
+- *v1.0.1 Release / 2021-07-28
