@@ -1,22 +1,22 @@
-## [KRMEMBERINFO]
+# [kr memberinfo]
 
-### 기능 소개
+## Function
+Enable comparison via Korean chat commands.
+<br/>
+<br/>
 
-  ``/보기`` or ``/관음`` 명령어를 통해 ``/memberinfo``와 같은 살펴보기 기능을 사용할 수 있습니다.
+## Command
+ ``/보기 [팀명]`` or ``/관음 [팀명]``
+<br/>
+<br/>
 
+## Manual
+It works when you enter the command after installation.
+<br/>
+<br/>
 
-### 명령어 및 사용 방법
-
-- ``/보기 [팀명]`` or ``/관음 [팀명]``
-
-#### 동작
-- 살펴보기 기능
-
-#### 동작 시점
-- 채팅창에 명령어를 입력했을 때
-
-
-### TEST
+## Release Note
+- *v1.0.0 Release / 2021-01-14*
 
 
 
