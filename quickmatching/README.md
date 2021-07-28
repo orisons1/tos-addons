@@ -1,4 +1,4 @@
-# [Quick Matching]
+# Quick Matching
 
 ## Function
 Automate challenge mode entry and matching with chat commands.
