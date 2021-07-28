@@ -35,8 +35,8 @@ Copy the form, fill it out, and submit it as a free file format.
 <br/>
 
 ### 2.3. Request Form Submission
-E-Mail : ```tester58126@gmail.com```
-KaKaoTalk : ```tester58126```
+- E-Mail : ```tester58126@gmail.com```
+- KaKaoTalk : ```tester58126```
 
 <br/>
 <br/>
