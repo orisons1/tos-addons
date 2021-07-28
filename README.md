@@ -23,7 +23,6 @@ Copy the form, fill it out, and submit it as a free file format.
 <br/>
 
 ### 2.2. Development
-<br/>
 #### 2.2.1. Development Request
 <br/>
 Request for development of addons that has never been before.
