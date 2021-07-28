@@ -14,9 +14,10 @@ Modifications to addons that are currently inoperative or discontinued developme
 ### 2.1.2. Request Form
 Copy the form, fill it out, and submit it as a free file format.
 ```
-1. 
-2. 
-3. 
+1. Addon Name 
+2. Addon .ipf file url
+3. Function ( in detail )
+4. Features to modify ( in detail )
 ```
 <br/>
 
@@ -25,9 +26,9 @@ Request for development of addons that has never been before.
 ### 2.2.2. Request Form
 Copy the form, fill it out, and submit it as a free file format.
 ```
-1. 
-2. 
-3. 
+1. Function ( in detail )
+2. Possibility of breach of contract terms
+3. Reasons and Validity for Need
 ```
 <br/>
 <br/>
