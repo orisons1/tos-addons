@@ -1,4 +1,4 @@
-# [Golden Fish Event]
+# Golden Fish Event
 
 ## Function
 When you succeed in fishing for an event, If the fishing box is filled with more than 5 spaces, the fishing box will be automatically emptied.
